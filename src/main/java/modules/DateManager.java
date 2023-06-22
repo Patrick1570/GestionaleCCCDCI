@@ -34,9 +34,9 @@ public class DateManager {
 	public LocalDate parseDate(String date) {
 		
 		String parts[] = date.split("/");
-		
+				
 		try {
-			return LocalDate.of(Integer.parseInt(parts[3]), Integer.parseInt(parts[2]), Integer.parseInt(parts[1]));
+			return LocalDate.of(Integer.parseInt(parts[2]), Integer.parseInt(parts[1]), Integer.parseInt(parts[0]));
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		}

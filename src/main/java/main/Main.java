@@ -1,14 +1,21 @@
 package main;
 
-import modules.ContoCorrente;
+import modules.Correntista;
+import modules.Inizializzatore;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ContoCorrente cliente1 = new ContoCorrente("Mario", "23/05/2021");
 		
-		cliente1.generaInteressi();
-		System.out.println(cliente1.toString());
+		Inizializzatore iniz = Inizializzatore.getInstance();
+		
+		for(Correntista x : iniz.generateArray()) {
+			System.out.println(x.toString());
+			
+		}
+		
+		
+
 	}
 
 }
